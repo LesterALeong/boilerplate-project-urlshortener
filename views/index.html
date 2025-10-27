@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <title>URL Shortener Microservice | freeCodeCamp.org</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
-    />
-    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener Microservice</title>
+    <link rel="stylesheet" href="/public/style.css">
   </head>
-
   <body>
     <h1>URL Shortener Microservice</h1>
     <main>
       <section>
-        <form action="api/shorturl" method="POST">
+        <form action="/api/shorturl" method="POST">
           <fieldset>
             <legend>URL Shortener</legend>
             <label for="url_input">URL:</label>
-            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
-            <input type="submit" value="POST URL" />
+            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" required>
+            <input type="submit" value="POST URL">
           </fieldset>
         </form>
       </section>
+      <section>
+        <h3>Example Usage:</h3>
+        <code>[project_url]/api/shorturl/3</code>
+        <h3>Example Output:</h3>
+        <code>
+          {
+            "original_url": "https://www.freecodecamp.org/",
+            "short_url": 3
+          }
+        </code>
+      </section>
     </main>
     <footer>
-      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
+      <p>By <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></p>
     </footer>
   </body>
 </html>
